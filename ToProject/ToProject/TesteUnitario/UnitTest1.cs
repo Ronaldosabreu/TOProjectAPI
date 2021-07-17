@@ -1,51 +1,109 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Nancy.Json;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using ToProject.DTO;
 using ToProject.Entityes;
-using ToProject.Models;
-using ToProject.UTIL;
 
 namespace TesteUnitario
 {
     [TestClass]
     public class UnitTest1
     {
-
-        private readonly IUsuarioRepositorio _usuarioRepo;
-        public UnitTest1(IUsuarioRepositorio usuarioRepo)
-        {
-            _usuarioRepo = usuarioRepo;
-        }
-
+        protected readonly HttpClient _client;
 
         [TestMethod]
-        public void Criar()
+        public void Get_Login()
         {
+            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create("http://www.gooogle.com/");
+            webRequest.AllowAutoRedirect = false;
+            HttpWebResponse response = (HttpWebResponse)webRequest.GetResponse();
+            //Returns "MovedPermanently", not 301 which is what I want.
+            var teste= response.StatusCode.ToString();
+            Assert.AreEqual("Moved", response.StatusCode.ToString());
+        }
 
-            HashSenha hash = new HashSenha();
+        public class Person
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public Person(string name, int age)
+            {
+                Name = name;
+                Age = age;
+            }
+            // Other properties, methods, events...
+        }
 
-            Usuario dto = new Usuario();
-            DTOUsuario dtoS = new DTOUsuario();
+        [TestMethod]
+        public void Insere_Login()
+        {
+            DTPTestUsuario insert = new DTPTestUsuario();
+            insert.nome = "b";
+            insert.email = "b";
+            insert.senha = "b";
+            //var item = new List<DTOProfile>() {
+            //    new DTOProfile(){ Nivel="Bill"},               
+            //};
+            List<DTOProfile> lista = new List<DTOProfile>();
+            for (int i = 0; i < 5; i++)
+            {              
+                DTOProfile item2 = new DTOProfile();
+                item2.Nivel = "nivel" + i.ToString(); ;
+                lista.Add(item2);
+            }   
+            insert.Profiles_User = lista;
+            var request = (HttpWebRequest)WebRequest.Create("http://localhost:36469/api/Usuarios/Inserir_Usuario");
+            request.ContentType = "application/json";
+            request.Method = "POST";
 
-            dto.Email = "b";
-            dto.Senha = "b";
-            dto.Nome = "b";
+            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+            {
 
-            dto.Senha = hash.Codifica(dto.Senha);
+                string json = JsonConvert.SerializeObject(insert, Formatting.Indented);
+                streamWriter.Write(json);
 
-            Assert.AreEqual(dtoS.mensagem = "INSERIDO COM SUCESSO", _usuarioRepo.Inserir_Usuario(dto));
+            }
+
+            var response = (HttpWebResponse)request.GetResponse();
+            using (var streamReader = new StreamReader(response.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+            }
+            Assert.AreEqual("OK", response.StatusCode.ToString());
+
+            Get_LoginAPI();
+
+        }
+
+        //[TestMethod]
+        public void Get_LoginAPI()
+        {
+                var request = (HttpWebRequest)WebRequest.Create("http://localhost:36469/api/Usuarios/Login");
+                request.ContentType = "application/json";
+                request.Method = "POST";
+
+                using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+                {
+                    string json = new JavaScriptSerializer().Serialize(new
+                    {
+                        email = "b",
+                        senha = "b"
+                    });
+
+                    streamWriter.Write(json);
+                }
             
-
-        }
-
-        [TestMethod]
-        public void Login_retorno()
-        {
-           
-            Usuario dto = new Usuario();
-
-            dto.Email = "b";
-            dto.Senha = "b";
-            Assert.IsNotNull(_usuarioRepo.Login(dto));
-
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var streamReader = new StreamReader(response.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                }
+                Assert.AreEqual("OK", response.StatusCode.ToString());
         }
     }
 }

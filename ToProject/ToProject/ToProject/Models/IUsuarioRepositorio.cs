@@ -1,10 +1,11 @@
-﻿using ToProject.Entityes;
+﻿using ToProject.DTO;
+using ToProject.Entityes;
 
 namespace ToProject.Models
 {
    public interface IUsuarioRepositorio
     {
         DTOUsuario Inserir_Usuario(Usuario user);
-        DTOUsuario Login(Usuario user);
+        DTOUsuarioLogin Login(Usuario user);
     }
 }

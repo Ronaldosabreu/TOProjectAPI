@@ -58,3 +58,11 @@ E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.dll
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ref\ToProject.dll
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.pdb
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.genruntimeconfig.cache
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Newtonsoft.Json.dll

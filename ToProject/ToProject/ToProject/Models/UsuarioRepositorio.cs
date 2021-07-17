@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ToProject.DTO;
 using ToProject.Entityes;
 using ToProject.UTIL;
 
@@ -16,10 +17,10 @@ namespace ToProject.Models
         }
 
 
-        public DTOUsuario Login(Usuario usuario)
+        public DTOUsuarioLogin Login(Usuario usuario)
         {
             Usuario dto = new Usuario();
-            DTOUsuario retorno_dto = new DTOUsuario();
+            DTOUsuarioLogin retorno_dto = new DTOUsuarioLogin();
             HashSenha hash = new HashSenha();
 
             _context.Profiles.ToList();
@@ -30,7 +31,7 @@ namespace ToProject.Models
             {
                 if (hash.Compara(usuario.Senha, login.Senha))
                 {
-                    retorno_dto = new DTOUsuario()
+                    retorno_dto = new DTOUsuarioLogin()
                     {
                         Id = login.Id,
                         created = login.Created,
@@ -45,7 +46,7 @@ namespace ToProject.Models
                 else
                 {
 
-                    retorno_dto = new DTOUsuario()
+                    retorno_dto = new DTOUsuarioLogin()
                     {
                         mensagem = "usuario e/ou Senha incorretos"
                     };
@@ -55,7 +56,7 @@ namespace ToProject.Models
             }
             else
             {
-                retorno_dto = new DTOUsuario()
+                retorno_dto = new DTOUsuarioLogin()
                 {
                     mensagem = "Usuário Incorreto"
                 };
@@ -79,7 +80,7 @@ namespace ToProject.Models
 
                     _dto_usuario_profile = new DTOUsuario()
                     {
-                        mensagem = "Usuário Incorreto"
+                        mensagem = "Usuário Já Cadastrado"
                     };
 
                     return _dto_usuario_profile;

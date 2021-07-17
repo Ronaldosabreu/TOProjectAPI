@@ -12,12 +12,7 @@ namespace ToProject.Entityes
         public DbSet<Profiles> Profiles { get; set; }
         public Context(DbContextOptions<Context> options) : base(options)
         { }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Usuario>()
-                .HasIndex(p => new { p.Email})
-                .IsUnique(true);
-        }
+     
 
     }
 }

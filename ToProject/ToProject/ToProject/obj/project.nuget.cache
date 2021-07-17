@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fLRQWEVn1S+/ipVgIwmLIR4i/u2XNTq6yeTYQWqMkTb65LaSwoc93R/6UdFBbhHRCuA7KpIdjyjjm1gVCjdJgg==",
+  "dgSpecHash": "I6C9KKSX6ty2z9pS/DnQgsr/9ndnejcLbujQpavOSl6K7Qp/b2fzuUyqhDJADCprzCE9+UgLg+pcPTj3fP4LyA==",
   "success": true,
   "projectFilePath": "E:\\TO\\ToProject\\ToProject\\ToProject\\ToProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\cryptsharpofficial\\2.1.0\\cryptsharpofficial.2.1.0.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.7\\microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.8\\microsoft.entityframeworkcore.5.0.8.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.8\\microsoft.entityframeworkcore.abstractions.5.0.8.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.8\\microsoft.entityframeworkcore.analyzers.5.0.8.nupkg.sha512",
@@ -17,9 +19,17 @@
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.11.1\\microsoft.identitymodel.jsonwebtokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.11.1\\microsoft.identitymodel.logging.6.11.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.11.1\\microsoft.identitymodel.tokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.11.1\\system.identitymodel.tokens.jwt.6.11.1.nupkg.sha512",
+    "C:\\Users\\Ronaldo Abreu\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": [
     {
