@@ -72,10 +72,9 @@ namespace ToProject.api
             }
         }
 
-
         [HttpPost]
-        [Route("Inserir_Usuario")]
-        public IActionResult Inserir_Usuario([FromBody] Usuario usuario)
+        [Route("Inserir")]
+        public IActionResult Inserir([FromBody] Usuario usuario)
         {
             HashSenha hash = new HashSenha();
 
