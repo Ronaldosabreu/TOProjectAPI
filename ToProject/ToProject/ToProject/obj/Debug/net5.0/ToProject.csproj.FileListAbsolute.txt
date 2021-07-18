@@ -43,7 +43,6 @@ E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.EntityFrameworkCo
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.csprojAssemblyReference.cache
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.GeneratedMSBuildEditorConfig.editorconfig
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.AssemblyInfoInputs.cache
 E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.AssemblyInfo.cs
@@ -66,3 +65,8 @@ E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Pro
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\TO\ToProject\ToProject\ToProject\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\TO\ToProject\ToProject\ToProject\obj\Debug\net5.0\ToProject.MvcApplicationPartsAssemblyInfo.cs

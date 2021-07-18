@@ -12,12 +12,20 @@ namespace ToProject.Entityes
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+
+        [Required(ErrorMessage = "PREENCHA O NOME")]
         public string Nome { get; set; }
+
+        [Required(ErrorMessage = "PREENCHA O EMAIL")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "PREENCHA O SENHA")]
         public string Senha { get; set; }
+
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
         public DateTime Last_login { get; set; }
+
         public ICollection<Profiles> Profiles_User { get; set; }
     }
 }

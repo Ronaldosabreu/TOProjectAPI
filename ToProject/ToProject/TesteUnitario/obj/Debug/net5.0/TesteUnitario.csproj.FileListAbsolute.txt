@@ -230,3 +230,7 @@ E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Microsoft.DotNet.Platfo
 E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Nancy.dll
+E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\TO\ToProject\ToProject\TesteUnitario\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll

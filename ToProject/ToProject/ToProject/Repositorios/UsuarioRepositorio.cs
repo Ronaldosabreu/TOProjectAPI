@@ -17,7 +17,7 @@ namespace ToProject.Models
         }
 
 
-        public DTOUsuarioLogin Login(Usuario usuario)
+        public DTOUsuarioLogin Login(Login usuario)
         {
             Usuario dto = new Usuario();
             DTOUsuarioLogin retorno_dto = new DTOUsuarioLogin();
@@ -68,9 +68,8 @@ namespace ToProject.Models
         public DTOUsuario Inserir_Usuario(Usuario usuario)
         {
             DTOUsuario _dto_usuario_profile = new DTOUsuario();
+
             DateTime data = DateTime.Now;
-            usuario.Created = data;
-            usuario.Last_login = data;
             try
             {
                 var q = (from c in _context.Usuarios where c.Email == usuario.Email select c).ToList();

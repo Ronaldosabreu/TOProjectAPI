@@ -6,7 +6,7 @@ using ToProject.Entityes;
 
 namespace ToProject.DTO
 {
-    public class DTPTestUsuario
+    public class DTOTestUsuario
     {
         
         public string nome { get; set; }

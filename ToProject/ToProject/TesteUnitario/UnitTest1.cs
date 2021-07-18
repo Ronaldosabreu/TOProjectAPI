@@ -27,28 +27,13 @@ namespace TesteUnitario
             Assert.AreEqual("Moved", response.StatusCode.ToString());
         }
 
-        public class Person
-        {
-            public string Name { get; set; }
-            public int Age { get; set; }
-            public Person(string name, int age)
-            {
-                Name = name;
-                Age = age;
-            }
-            // Other properties, methods, events...
-        }
-
         [TestMethod]
         public void Insere_Login()
         {
-            DTPTestUsuario insert = new DTPTestUsuario();
+            DTOTestUsuario insert = new DTOTestUsuario();
             insert.nome = "b";
             insert.email = "b";
             insert.senha = "b";
-            //var item = new List<DTOProfile>() {
-            //    new DTOProfile(){ Nivel="Bill"},               
-            //};
             List<DTOProfile> lista = new List<DTOProfile>();
             for (int i = 0; i < 5; i++)
             {              
@@ -63,7 +48,7 @@ namespace TesteUnitario
 
             using (var streamWriter = new StreamWriter(request.GetRequestStream()))
             {
-
+                //usando o Json Serialize
                 string json = JsonConvert.SerializeObject(insert, Formatting.Indented);
                 streamWriter.Write(json);
 
@@ -89,6 +74,8 @@ namespace TesteUnitario
 
                 using (var streamWriter = new StreamWriter(request.GetRequestStream()))
                 {
+
+                    //usando nancy
                     string json = new JavaScriptSerializer().Serialize(new
                     {
                         email = "b",

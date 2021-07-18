@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,20 +18,23 @@ namespace ToProject.api
     [Route("api/[controller]")]
     public class Usuarios : ControllerBase
     {
-        private readonly IUsuarioRepositorio _usuarioRepo;
+        private readonly IUsuarioRepositorio _usuario_inserir_Repo;
         private readonly IConfiguration _configuration;
         public Usuarios(IUsuarioRepositorio usuarioRepo, IConfiguration configuration)
         {
             _configuration = configuration;
-            _usuarioRepo = usuarioRepo;
+            _usuario_inserir_Repo = usuarioRepo;
         }
 
         [HttpPost("Login")]
-        public IActionResult Login([FromBody] Usuario usuario)
+        public IActionResult Login([FromBody] Login usuario)
         {
+                if (usuario.Email == null)
+            {
+                return BadRequest(new { mensagem = "EMAIL OBRIGATORIO" });
+            }
 
-
-            DTOUsuarioLogin dto_usuarios = _usuarioRepo.Login(usuario);
+            DTOUsuarioLogin dto_usuarios = _usuario_inserir_Repo.Login(usuario);
 
 
             if (dto_usuarios.mensagem == "OK")
@@ -60,7 +64,7 @@ namespace ToProject.api
 
                 dto_usuarios.token = new JwtSecurityTokenHandler().WriteToken(token).ToString();
 
-                return Ok(dto_usuarios);
+                return Ok(JsonConvert.SerializeObject(dto_usuarios));
             }
             else
             {
@@ -77,10 +81,10 @@ namespace ToProject.api
 
             usuario.Senha = hash.Codifica(usuario.Senha);
 
-            DTOUsuario usuarios = _usuarioRepo.Inserir_Usuario(usuario);
+            DTOUsuario usuarios = _usuario_inserir_Repo.Inserir_Usuario(usuario);
             if (usuarios.mensagem == "INSERIDO COM SUCESSO")
             {
-                return Ok(usuarios);
+                return Ok(JsonConvert.SerializeObject(usuarios));
             }
             else
             {
