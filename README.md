@@ -1,8 +1,11 @@
 "# TOProjectAPI" 
-OBS Gerais, criado token quando recupera o login, tempo de expiração 10 minutos, criado o swagger quando roda o projeto com os dois endpoints 
+Para rodar o projeto, com visual studio, CTRL+f5 no projeto API  e depois executar o projeto de Teste Unidade
+
+Para o Postman
+
 Inserir Usuario e Login do usuário
 -Para inserir usuario após rodar a api
-http://localhost:36469/api/Usuarios/Inserir_Usuario
+http://localhost:36469/api/Usuarios/Inserir
 post
 Json Schema
   {
@@ -25,3 +28,4 @@ http://localhost:36469/api/Usuarios/Login
 post
 Json Schema{ "Email": "ronaldosoares.a@gmail.com", "Senha":"a" }
 "# TOProjectAPI" 
+OBS Gerais, criado token quando recupera o login, tempo de expiração 10 minutos, criado o swagger quando roda o projeto com os dois endpoints 
